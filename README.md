@@ -1,59 +1,105 @@
-# TodoApp
+# Todo App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0.
+A modern, feature-rich Todo application built with **Angular 21** and **Angular Signals** for reactive state management.
 
-## Development server
+![Angular](https://img.shields.io/badge/Angular-21-red?logo=angular)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1-38B2AC?logo=tailwind-css)
 
-To start a local development server, run:
+## ✨ Features
 
-```bash
-ng serve
-```
+- **Add Todos** - Quickly add new tasks with a simple input
+- **Edit Todos** - Double-click to edit existing tasks inline
+- **Delete Todos** - Remove tasks you no longer need
+- **Toggle Completion** - Mark tasks as complete/incomplete
+- **Filter Todos** - View all, active, or completed tasks
+- **Clear Completed** - Bulk remove all completed tasks
+- **Dark/Light Theme** - Toggle between themes with system preference detection
+- **Persistent Theme** - Theme preference saved to localStorage
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🛠️ Tech Stack
 
-## Code scaffolding
+- **Framework**: Angular 21 with standalone components
+- **State Management**: Angular Signals (reactive primitives)
+- **Styling**: Tailwind CSS 4
+- **Forms**: Angular FormsModule (two-way binding)
+- **Testing**: Vitest with jsdom
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🚀 Getting Started
 
-```bash
-ng generate component component-name
-```
+### Prerequisites
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Node.js (v18 or higher recommended)
+- npm (v10 or higher)
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Installation
 
 ```bash
-ng test
+# Clone the repository
+git clone <repository-url>
+cd todo-app
+
+# Install dependencies
+npm install
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+### Development Server
 
 ```bash
-ng e2e
+npm start
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Navigate to `http://localhost:4200/`. The application will automatically reload when you modify source files.
 
-## Additional Resources
+### Build
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+npm run build
+```
+
+Build artifacts will be stored in the `dist/` directory.
+
+### Testing
+
+```bash
+npm test
+```
+
+Runs unit tests using Vitest.
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── app.ts          # Main component with todo logic
+│   ├── app.html        # Component template
+│   ├── app.css         # Component styles
+│   ├── app.spec.ts     # Unit tests
+│   ├── app.config.ts   # App configuration
+│   └── app.routes.ts   # Routing configuration
+├── index.html          # Main HTML file
+├── main.ts             # Application bootstrap
+└── styles.css          # Global styles
+```
+
+## 📖 Usage
+
+1. **Add a todo**: Type in the input field and press Enter or click the add button
+2. **Complete a todo**: Click the checkbox next to a task
+3. **Edit a todo**: Double-click on a task's text to edit it
+4. **Delete a todo**: Click the delete (×) button on a task
+5. **Filter tasks**: Use the "All", "Active", or "Completed" buttons
+6. **Clear completed**: Click "Clear completed" to remove all finished tasks
+7. **Toggle theme**: Click the theme button to switch between dark and light modes
+
+## 🎨 Theming
+
+The app supports both dark and light modes:
+- Automatically detects system color scheme preference
+- Manually toggle via the theme button
+- Preference is persisted in localStorage
+
+## 📄 License
+
+This project is private and not licensed for public distribution.
