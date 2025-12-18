@@ -1,6 +1,7 @@
 import { Component, signal, computed, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TodoService, Todo } from './todo.service';
+import confetti from 'canvas-confetti';
 
 type FilterType = 'all' | 'active' | 'completed';
 
@@ -77,13 +78,27 @@ export class App implements OnInit {
     const todo = this.todos().find((t) => t.id === id);
     if (!todo) return;
 
-    const updatedTodo = { ...todo, completed: !todo.completed };
+    const isBeingCompleted = !todo.completed;
+    const updatedTodo = { ...todo, completed: isBeingCompleted };
     try {
       await this.todoService.updateTodo(updatedTodo);
       this.todos.update((todos) => todos.map((t) => (t.id === id ? updatedTodo : t)));
+
+      if (isBeingCompleted) {
+        this.triggerConfetti();
+      }
     } catch (error) {
       console.error('Failed to toggle todo:', error);
     }
+  }
+
+  private triggerConfetti() {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+      colors: ['#6366f1', '#f472b6', '#10b981', '#fbbf24', '#8b5cf6'],
+    });
   }
 
   async deleteTodo(id: number) {

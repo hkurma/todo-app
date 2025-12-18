@@ -22,6 +22,7 @@ A modern, feature-rich Todo application built with **Angular 21** and **Angular 
 - **Edit Todos** - Double-click to edit existing tasks inline
 - **Delete Todos** - Remove tasks you no longer need
 - **Toggle Completion** - Mark tasks as complete/incomplete
+- **Confetti Celebration** - Enjoy a confetti burst when completing tasks 🎉
 - **Filter Todos** - View all, active, or completed tasks
 - **Clear Completed** - Bulk remove all completed tasks
 - **Dark/Light Theme** - Toggle between themes with system preference detection
@@ -96,7 +97,7 @@ src/
 ## 📖 Usage
 
 1. **Add a todo**: Type in the input field and press Enter or click the add button
-2. **Complete a todo**: Click the checkbox next to a task
+2. **Complete a todo**: Click the checkbox next to a task (watch for confetti! 🎉)
 3. **Edit a todo**: Double-click on a task's text to edit it
 4. **Delete a todo**: Click the delete (×) button on a task
 5. **Filter tasks**: Use the "All", "Active", or "Completed" buttons
