@@ -79,7 +79,7 @@ Runs unit tests using Vitest.
 
 ## 📁 Project Structure
 
-```
+```bash
 src/
 ├── app/
 │   ├── app.ts          # Main component with todo logic
@@ -106,6 +106,7 @@ src/
 ## 🎨 Theming
 
 The app supports both dark and light modes:
+
 - Automatically detects system color scheme preference
 - Manually toggle via the theme button
 - Preference is persisted in localStorage
