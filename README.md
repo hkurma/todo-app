@@ -6,6 +6,16 @@ A modern, feature-rich Todo application built with **Angular 21** and **Angular 
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1-38B2AC?logo=tailwind-css)
 
+## Screenshots
+
+### Dark Mode
+
+![Screenshot Dark Mode](./public/images/screenshot-dark-mode.png)
+
+### Light Mode
+
+![Screenshot Light Mode](./public/images/screenshot-light-mode.png)
+
 ## ✨ Features
 
 - **Add Todos** - Quickly add new tasks with a simple input
